@@ -1,0 +1,25 @@
+{
+  "productos": [
+    {
+      "nombreProducto": "cafe",
+      "imagen": "https://media.istockphoto.com/photos/cup-of-coffee-isolated-on-white-background-picture-id1281018096?s=612x612",
+      "precio": 300,
+      "categoria": "bebida-caliente",
+      "id": 1
+    },
+    {
+      "nombreProducto": "brownie",
+      "imagen": "https://media.istockphoto.com/photos/cup-of-coffee-isolated-on-white-background-picture-id1281018096?s=612x612",
+      "precio": 250,
+      "categoria": "dulce",
+      "id": 2
+    },
+    {
+      "nombreProducto": "licuado",
+      "imagen": "https://media.istockphoto.com/photos/cup-of-coffee-isolated-on-white-background-picture-id1281018096?s=612x612",
+      "precio": 450,
+      "categoria": "bebida-fria",
+      "id": 3
+    }
+  ]
+}
