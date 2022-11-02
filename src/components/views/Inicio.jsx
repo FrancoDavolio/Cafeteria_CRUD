@@ -4,7 +4,7 @@ import CardProducto from './CardProducto';
 
 const Inicio = () => {
     return (
-        <Container>
+        <Container className='mainSection'>
             <h1 className='text-center display-1 my-5'>Bienvenidos</h1>
             <hr />
             <Row>

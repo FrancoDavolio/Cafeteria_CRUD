@@ -3,7 +3,7 @@ import { Button, Card, Container, Row, Col, Badge } from "react-bootstrap";
 
 const DetalleProducto = () => {
   return (
-    <Container className="my-5">
+    <Container className="my-5 mainSection">
       <Card style={{ width: "45rem" }}>
         <Row>
           <Col md="4">

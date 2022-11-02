@@ -3,7 +3,7 @@ import { Container, Button, Row, Col, Table } from "react-bootstrap";
 
 const Administrador = () => {
   return (
-    <Container>
+    <Container className='mainSection'>
       <Row className="my-4">
         <Col md="10">
           <h1 className="fs-1">Productos disponibles</h1>
