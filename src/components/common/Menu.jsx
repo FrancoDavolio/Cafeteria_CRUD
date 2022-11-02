@@ -1,18 +1,26 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
+import { Link, NavLink } from "react-router-dom";
 
 const Menu = () => {
   return (
     <header>
-      <Nav variant="pills" defaultActiveKey="/home" className="bg-danger py-3">
-        <Nav.Item className="ms-3">
+      <Nav className="bg-danger py-3">
+        <Nav.Item as={Link} to="/" className="ms-3 nav-link text-light">
           <h2>Cafeteria</h2>
         </Nav.Item>
         <Nav.Item className="ms-2">
-          <Nav.Link href="/">Inicio</Nav.Link>
+          <NavLink to="/" className="nav-item nav-link ms-2 text-light">
+            Inicio
+          </NavLink>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="/administrar">Administrar</Nav.Link>
+          <NavLink
+            to="/administrar"
+            className="nav-item nav-link ms-2 text-light"
+          >
+            Administrar
+          </NavLink>
         </Nav.Item>
       </Nav>
     </header>
