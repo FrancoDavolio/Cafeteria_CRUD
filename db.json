@@ -20,34 +20,6 @@
       "precio": 450,
       "categoria": "bebida-fria",
       "id": 3
-    },
-    {
-      "nombreProducto": "cafe expreso",
-      "imagen": "https://www.istockphoto.com/es/foto/caf%C3%A9-gm1217845199-355649493",
-      "precio": 400,
-      "categoria": "bebida-caliente",
-      "id": 4
-    },
-    {
-      "nombreProducto": "te",
-      "precio": "200",
-      "imagenURL": "https://images.pexels.com/photos/13820500/pexels-photo-13820500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "categoria": "bebida-caliente",
-      "id": 5
-    },
-    {
-      "nombreProducto": "te helado",
-      "precio": "450",
-      "imagenURL": "https://images.pexels.com/photos/13820500/pexels-photo-13820500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "categoria": "bebida-fria",
-      "id": 6
-    },
-    {
-      "nombreProducto": "Medialuna",
-      "precio": "50",
-      "imagenURL": "https://images.pexels.com/photos/13820500/pexels-photo-13820500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "categoria": "dulce",
-      "id": 7
     }
   ]
 }
