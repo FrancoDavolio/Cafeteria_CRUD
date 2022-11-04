@@ -1,6 +1,8 @@
 import React from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import { crearProductoAPI } from "../helpers/queries";
 
 const CrearProducto = () => {
   const {
@@ -10,8 +12,19 @@ const CrearProducto = () => {
   } = useForm();
 
   const onSubmit = (datos) => {
-    console.log("desde mi funsion submit");
     console.log(datos);
+    crearProductoAPI(datos).then((respuesta) => {
+      console.log(respuesta);
+      if (respuesta.status === 201) {
+        Swal.fire(
+          "Producto creado",
+          "El producto fue creado exitosamente",
+          "success"
+        );
+      }else{
+        Swal.fire("Ocurrio un error");
+      }
+    });
   };
 
   return (
