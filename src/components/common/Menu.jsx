@@ -22,6 +22,16 @@ const Menu = () => {
             Administrar
           </NavLink>
         </Nav.Item>
+        <Nav.Item className="ms-2">
+          <NavLink to="/login" className="nav-item nav-link ms-2 text-light">
+            Login
+          </NavLink>
+        </Nav.Item>
+        <Nav.Item className="ms-2">
+          <NavLink to="/register" className="nav-item nav-link ms-2 text-light">
+            Register
+          </NavLink>
+        </Nav.Item>
       </Nav>
     </header>
   );

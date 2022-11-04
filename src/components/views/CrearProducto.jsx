@@ -9,6 +9,7 @@ const CrearProducto = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm();
 
   const onSubmit = (datos) => {
@@ -21,6 +22,7 @@ const CrearProducto = () => {
           "El producto fue creado exitosamente",
           "success"
         );
+        reset();
       }else{
         Swal.fire("Ocurrio un error");
       }

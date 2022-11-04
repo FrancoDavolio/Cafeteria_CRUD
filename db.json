@@ -41,6 +41,13 @@
       "imagenURL": "https://images.pexels.com/photos/13820500/pexels-photo-13820500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "categoria": "bebida-fria",
       "id": 6
+    },
+    {
+      "nombreProducto": "Medialuna",
+      "precio": "50",
+      "imagenURL": "https://images.pexels.com/photos/13820500/pexels-photo-13820500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoria": "dulce",
+      "id": 7
     }
   ]
 }
