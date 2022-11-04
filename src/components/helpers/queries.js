@@ -7,6 +7,7 @@ export const consultarAPI = async () => {
     return listaProductos
   } catch (e) {
     console.log(e)
+    return false
   }
 }
 
@@ -22,6 +23,7 @@ export const crearProductoAPI = async (producto) => {
     return respuesta
   } catch (e) {
     console.log(e)
+    return false
   }
 }
 
@@ -33,18 +35,36 @@ export const borrarProductoAPI = async (id) => {
     return respuesta
   } catch (e) {
     console.log(e)
+    return false
   }
 }
 
 export const obtenerProductoAPI = async (id) => {
   try {
     const respuesta = await fetch(URL + '/' + id)
-    const producto ={
+    const producto = {
       dato: await respuesta.json(),
-      status: respuesta.status
+      status: respuesta.status,
     }
-    return producto;
+    return producto
   } catch (e) {
     console.log(e)
+    return false
+  }
+}
+
+export const editarProductoAPI = async (id, producto) => {
+  try {
+    const respuesta = await fetch(URL + '/' + id, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(producto),
+    })
+    return respuesta
+  } catch (e) {
+    console.log(e)
+    return false
   }
 }

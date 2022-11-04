@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useParams } from "react-router-dom";
-import { obtenerProductoAPI } from "../helpers/queries";
+import { useParams, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import { editarProductoAPI, obtenerProductoAPI } from "../helpers/queries";
 
 const EditarProducto = () => {
+  const navegacion=useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -19,7 +22,7 @@ const EditarProducto = () => {
       if (respuesta.status === 200) {
         setValue("nombreProducto", respuesta.dato.nombreProducto);
         setValue("precio", respuesta.dato.precio);
-        setValue("imageURL", respuesta.dato.imagenURL);
+        setValue("imagenURL", respuesta.dato.imagenURL);
         setValue("categoria", respuesta.dato.categoria);
       }
     });
@@ -27,7 +30,18 @@ const EditarProducto = () => {
 
   const onSubmit = (datos) => {
     console.log(datos);
-    
+    editarProductoAPI(id, datos).then((respuesta) => {
+      if (respuesta.status === 200) {
+        Swal.fire(
+          "Producto editado exitsamente",
+          "El producto fue correctamente actualizado",
+          "success"
+        );
+        navegacion("/administrar");
+      } else {
+        Swal.fire("Error", "Intentelo mas tarde");
+      }
+    });
   };
 
   return (

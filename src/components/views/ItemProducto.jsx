@@ -5,6 +5,7 @@ import { borrarProductoAPI, consultarAPI } from "../helpers/queries";
 import Swal from "sweetalert2";
 
 const ItemProducto = ({ producto, setProducto }) => {
+  
   const borrarProducto = () => {
     borrarProductoAPI(producto.id).then((respuesta) => {
       if (respuesta.status === 200) {
@@ -27,7 +28,7 @@ const ItemProducto = ({ producto, setProducto }) => {
       <td>{producto.id}</td>
       <td>{producto.nombreProducto}</td>
       <td>{producto.precio}</td>
-      <td>{producto.imagen}</td>
+      <td>{producto.imagenURL}</td>
       <td>{producto.categoria}</td>
       <td>
         <Link
