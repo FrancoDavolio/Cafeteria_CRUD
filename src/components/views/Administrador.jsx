@@ -1,15 +1,31 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { Container, Button, Row, Col, Table } from "react-bootstrap";
+import { consultarAPI } from "../helpers/queries.js";
+import ItemProducto from "./ItemProducto.jsx";
+import { Link} from "react-router-dom";
 
 const Administrador = () => {
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    consultarAPI().then(
+      (respuesta) => {
+        setProductos(respuesta);
+      },
+      (reason) => {
+        console.log(reason);
+      }
+    );
+  }, []);
+
   return (
-    <Container className='mainSection'>
+    <Container className="mainSection">
       <Row className="my-4">
         <Col md="10">
           <h1 className="fs-1">Productos disponibles</h1>
         </Col>
         <Col md="2">
-          <Button>Agregar</Button>
+          <Link className="btn btn-primary" to="/administrar/crear">Agregar</Link>
         </Col>
         <hr />
       </Row>
@@ -25,14 +41,9 @@ const Administrador = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>Dulce</td>
-            <td><Button variant="warning">Editar</Button><br /><Button variant="danger">Borrar</Button></td>
-          </tr>
+          {productos.map((producto) => (
+            <ItemProducto key={producto.id} producto={producto}></ItemProducto>
+          ))}
         </tbody>
       </Table>
     </Container>

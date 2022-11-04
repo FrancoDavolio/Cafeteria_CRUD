@@ -4,7 +4,7 @@ import { Form, Button, Container } from "react-bootstrap";
 const EditarProducto = () => {
   return (
     <Container className='mainSection'>
-      <h1>Nuevo producto</h1>
+      <h1>Editar producto</h1>
       <hr />
       <Form>
         <Form.Group className="mb-3">
