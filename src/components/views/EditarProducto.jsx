@@ -1,36 +1,37 @@
-import React from "react";
+import { useEffect } from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import Swal from "sweetalert2";
-import { crearProductoAPI } from "../helpers/queries";
-
+import { useParams } from "react-router-dom";
+import { obtenerProductoAPI } from "../helpers/queries";
 
 const EditarProducto = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    setValue,
   } = useForm();
+
+  const { id } = useParams();
+
+  useEffect(() => {
+    obtenerProductoAPI(id).then((respuesta) => {
+      if (respuesta.status === 200) {
+        setValue("nombreProducto", respuesta.dato.nombreProducto);
+        setValue("precio", respuesta.dato.precio);
+        setValue("imageURL", respuesta.dato.imagenURL);
+        setValue("categoria", respuesta.dato.categoria);
+      }
+    });
+  }, []);
 
   const onSubmit = (datos) => {
     console.log(datos);
-    //aqui taaaaaaa
-    crearProductoAPI(datos).then((respuesta) => {
-      console.log(respuesta);
-      if (respuesta.status === 201) {
-        Swal.fire(
-          "Producto creado",
-          "El producto fue creado exitosamente",
-          "success"
-        );
-      }else{
-        Swal.fire("Ocurrio un error");
-      }
-    });
+    
   };
 
   return (
-    <Container className='mainSection'>
+    <Container className="mainSection">
       <h1>Editar producto</h1>
       <hr />
       <Form onSubmit={handleSubmit(onSubmit)}>
