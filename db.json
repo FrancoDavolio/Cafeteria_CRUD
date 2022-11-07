@@ -1,39 +1,47 @@
 {
   "productos": [
     {
-      "nombreProducto": "cafe",
+      "nombreProducto": "Cafe Expreso",
       "precio": 300,
-      "imagenURL": "https://images.pexels.com/photos/13820500/pexels-photo-13820500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "imagenURL": "https://media.istockphoto.com/id/1126871442/es/foto/taza-de-caf%C3%A9.jpg?b=1&s=612x612&w=0&k=20&c=CNX-ZdPDgRfu-i4lli78IBNptq04yCFynm8ZKRqdoL4=",
       "categoria": "bebida-caliente",
       "id": 1
     },
     {
-      "nombreProducto": "brownie",
+      "nombreProducto": "Brownie con frutas",
       "precio": 250,
-      "imagenURL": "https://images.pexels.com/photos/13820500/pexels-photo-13820500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "imagenURL": "https://images.pexels.com/photos/3026804/pexels-photo-3026804.jpeg?auto=compress&cs=tinysrgb&w=600",
       "categoria": "dulce",
       "id": 2
     },
     {
-      "nombreProducto": "te helado",
+      "nombreProducto": "Ice Tea",
       "precio": "300",
-      "imagenURL": "https://images.pexels.com/photos/13820500/pexels-photo-13820500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "imagenURL": "https://images.pexels.com/photos/518591/pexels-photo-518591.jpeg?auto=compress&cs=tinysrgb&w=600",
       "categoria": "bebida-fria",
       "id": 4
     },
     {
-      "nombreProducto": "te",
+      "nombreProducto": "Te",
       "precio": "200",
-      "imagenURL": "https://images.pexels.com/photos/13820500/pexels-photo-13820500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "imagenURL": "https://images.pexels.com/photos/1493080/pexels-photo-1493080.jpeg?auto=compress&cs=tinysrgb&w=600",
       "categoria": "bebida-caliente",
       "id": 5
     },
     {
       "nombreProducto": "Medialuna",
       "precio": "50",
-      "imagenURL": "https://images.pexels.com/photos/13820500/pexels-photo-13820500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "imagenURL": "https://media.istockphoto.com/id/1001971972/es/foto/desayuno-con-croissants-caf%C3%A9-jugo-de-naranja-y-bayas.jpg?b=1&s=612x612&w=0&k=20&c=JxKYmYRgBQz_FGvHloPyEnViMS-F_sah_EeEWmfqkE0=",
       "categoria": "dulce",
       "id": 6
+    }
+  ],
+
+  "usuarios": [
+    {
+      "usuario": "franco",
+      "contrasena": "Miuci123",
+      "email": "francodavolio12@gmail.com"
     }
   ]
 }

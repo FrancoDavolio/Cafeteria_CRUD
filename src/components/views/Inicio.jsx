@@ -25,7 +25,7 @@ const Inicio = () => {
       <hr />
       <Row className="justify-content-around">
         {productos.map((producto) => (
-          <Col>
+          <Col className="d-flex justify-content-center">
             <CardProducto key={producto.id} producto={producto}></CardProducto>
           </Col>
         ))}

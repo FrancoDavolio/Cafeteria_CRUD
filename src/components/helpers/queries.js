@@ -1,10 +1,27 @@
 const URL = process.env.REACT_APP_API_CAFE
+const URLU = process.env.REACT_APP_API_CAFE_USUARIOS
 
 export const consultarAPI = async () => {
   try {
     const respuesta = await fetch(URL)
     const listaProductos = await respuesta.json()
     return listaProductos
+  } catch (e) {
+    console.log(e)
+    return false
+  }
+}
+
+export const crearUsuarioAPI = async (usuario)=>{
+  try {
+    const entrega = await fetch(URLU, {
+      method: 'POST',
+      headers:{
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(usuario)
+    })
+    return entrega
   } catch (e) {
     console.log(e)
     return false
